@@ -12,8 +12,7 @@ print (f"Список: {a}")
 
 opros = input ("Перемешать порядок элементов: ")
 
-if ("а" in opros) == True:
+while ("а" in opros) == True:
     random.shuffle(a)
     print(a)
-else:
-    print("Ok")
+    opros = input ("Перемешать порядок элементов: ")
