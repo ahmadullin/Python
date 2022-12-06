@@ -4,7 +4,7 @@ num = int (input ("Сколько чисел будет в списке: "))
 count = 0
 a = []
 for i in range (num):
-    k = int (input (f"Введите {i+1}-ое значение: "))
+    k = int (input (f"Введите {i + 1}-ое значение: "))
     a.append(k)
     if i%2 == 1:
         count += k
