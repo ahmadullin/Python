@@ -34,7 +34,6 @@ def f(x):
             with open (file_path, 'a') as f_data:
                 f_data.write (' = 0')
         
-
         return f(x-1)
 
 f(num)
