@@ -10,21 +10,23 @@ def f(x):
     while x >= 0:
         a = random.randint(0, 100)
         
-        if x != 0 and a > 1:
+        if x > 1 and a > 1:
             with open (file_path, 'a') as f_data:
-                f_data.write (f'{a}*x^{x}')
-                f_data.write (' + ')
+                f_data.write (f'{a}*x^{x} + ')
                 
-        if x != 0 and a == 1:
+        if x > 1 and a == 1:
             with open (file_path, 'a') as f_data:
-                f_data.write (f'x^{x}')
-                f_data.write (' + ')
+                f_data.write (f'x^{x} + ')
 
-        if x != 0 and a == 0:
+        if x > 1 and a == 0:
             with open (file_path, 'a') as f_data:
                 f_data.write (' + ')
         
-        if x == 0 and a !=0:
+        if x == 1 and a > 1:
+            with open (file_path, 'a') as f_data:
+                f_data.write (f'{a}*x + ')
+        
+        if x == 0 and a > 0:
             with open (file_path, 'a') as f_data:
                 f_data.write (f'{a} = 0')
     
