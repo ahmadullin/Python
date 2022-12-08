@@ -5,7 +5,6 @@ import random, os
 while (num := int (input ("Введите натуральное число: "))) < (0):
     print ("Попробуйте снова...")
 
-#f(random.randint(0, 100), num)
 file_path = r"C:\Users\1\Desktop\Python\Solving_tasks_4\Task_4.txt"
 def f(x):
     while x >= 0:
