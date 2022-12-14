@@ -37,11 +37,16 @@ def play(s,i):
             x = int (input ("Ячейка занята. Введите другое значение --> "))
         s[x-1] = 'X'
 
-        if (s[0] == s[1] == s[2]) or (s[3] == s[4] == s[5]) or (s[6] == s[7] == s[8]) \
-            or (s[0] == s[3] == s[6]) or (s[1] == s[4] == s[7]) or (s[2] == s[5] == s[8]) \
-                or (s[0] == s[4] == s[8]) or (s[6] == s[4] == s[2]): print(f"Победа {player}")
+        if (s[0] != 1) and (s[1] != 2) and (s[2] != 3) \
+            and (s[3] != 4) and (s[4] != 5) and (s[5] != 6) \
+                and (s[6] != 7) and (s[7] != 8) and (s[8] != 9):
+                print ("Ничья")
         else:
-            if i == 0: return play(s, i+1)
+            if (s[0] == s[1] == s[2]) or (s[3] == s[4] == s[5]) or (s[6] == s[7] == s[8]) \
+                or (s[0] == s[3] == s[6]) or (s[1] == s[4] == s[7]) or (s[2] == s[5] == s[8]) \
+                    or (s[0] == s[4] == s[8]) or (s[6] == s[4] == s[2]): print(f"Победа {player}")
+            else:
+                if i == 0: return play(s, i+1)
 
     if i == 1:
         player = player_2
@@ -54,11 +59,16 @@ def play(s,i):
             o = int (input ("Ячейка занята. Введите другое значение --> "))
         s[o-1] = 'O'
         
-        if (s[0] == s[1] == s[2]) or (s[3] == s[4] == s[5]) or (s[6] == s[7] == s[8]) \
-            or (s[0] == s[3] == s[6]) or (s[1] == s[4] == s[7]) or (s[2] == s[5] == s[8]) \
-                or (s[0] == s[4] == s[8]) or (s[6] == s[4] == s[2]): print(f"Победа {player}")
+        if (s[0] != 1) and (s[1] != 2) and (s[2] != 3) \
+            and (s[3] != 4) and (s[4] != 5) and (s[5] != 6) \
+                and (s[6] != 7) and (s[7] != 8) and (s[8] != 9):
+                print ("Победа ничья")
         else:
-            if i == 1: return play(s, i-1)
+            if (s[0] == s[1] == s[2]) or (s[3] == s[4] == s[5]) or (s[6] == s[7] == s[8]) \
+                or (s[0] == s[3] == s[6]) or (s[1] == s[4] == s[7]) or (s[2] == s[5] == s[8]) \
+                    or (s[0] == s[4] == s[8]) or (s[6] == s[4] == s[2]): print(f"Победа {player}")
+            else:
+                if i == 1: return play(s, i-1)
     
 
 s = [1, 2, 3, 4, 5, 6, 7, 8, 9]
