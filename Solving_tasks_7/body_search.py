@@ -26,5 +26,5 @@ def call_log_search(contact):
                 for i in f_data.readlines():
                     if num == i[0]:
                         x.add_row(i.split(' '))
-                    print(f'\n {x}')
+                print(f'\n {x}')
     return (count)                
