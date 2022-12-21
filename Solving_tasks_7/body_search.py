@@ -5,8 +5,10 @@ file_path = table.path()
 log_table = table.log()
 x = table.log()
 
+count = 0
+
 def call_log_search(contact):
-    count = 0
+    global count
     with open (file_path, 'r') as f_data:
         for i in f_data.readlines():
             i = i.replace('\n','')
@@ -25,3 +27,4 @@ def call_log_search(contact):
                     if num == i[0]:
                         x.add_row(i.split(' '))
                     print(f'\n {x}')
+    return (count)                
