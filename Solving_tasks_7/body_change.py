@@ -4,7 +4,7 @@ import view
 file_path = table.path()
 log_table = table.log()
 
-def call_log_change(id,action):
+def call_log_change(id, action):
     with open (file_path, 'r') as f_data:
         full = f_data.readlines()
         z = full[id - 1].split(' ')
@@ -21,9 +21,9 @@ def call_log_change(id,action):
     full[id - 1] = z
     with open (file_path, 'w') as f_data:
         for i in range(len(full)):
+
             if i != int(len(full) - 1):
                 if '\n' not in full[i]: f_data.writelines(f'{full[i]}\n')
-                else: f_data.writelines(f'{full[i]}')
+
             else:
                 if '\n' not in full[i]: f_data.writelines(f'{full[i]}')
-                else: f_data.writelines(f'{full[i]}')
