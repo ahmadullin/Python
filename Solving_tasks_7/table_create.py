@@ -6,5 +6,5 @@ def log():
     return log_table
     
 def path():
-    file_path = r'C:\Users\1\Desktop\Python\call_log.txt'
+    file_path = r'C:\Users\1\Desktop\Python\Solving_tasks_7\call_log.txt'
     return file_path
